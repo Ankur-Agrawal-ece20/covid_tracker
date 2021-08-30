@@ -257,7 +257,7 @@ for (var prop in countryArr) {
   var el = document.createElement("a");
   el.text = `${prop} - ${countryArr[prop]}`;
   el.onclick = function () {
-    countrySelected(prop);
+    countrySelected(this);
   };
   select.appendChild(el);
 }
@@ -296,7 +296,7 @@ async function getLatestCountryDataByCode(params) {
       }
     );
     const response_1 = await response.json();
-    console.log(response_1);
+    // console.log(response_1);
     return response_1;
   } catch (err) {
     console.error(err);
@@ -357,8 +357,8 @@ async function fallBackOnIndia() {
 
 window.addEventListener("load", async () => {
   let lastSearch = localStorage.getItem("lastSearch");
-  console.log("lastSearch", lastSearch);
-  console.log(countryArr);
+  //   console.log("lastSearch", lastSearch);
+  //   console.log(countryArr);
   if (lastSearch) {
     let temporaryData = await getLatestCountryDataByCode(lastSearch);
     if (temporaryData && temporaryData.length > 0) {
@@ -372,9 +372,12 @@ window.addEventListener("load", async () => {
 });
 
 async function countrySelected(param) {
-  let temporaryData = await getLatestCountryDataByCode(param);
+  console.log(param.innerText);
+  let myArr = param.innerText.split(" - ")[0];
+  let temporaryData = await getLatestCountryDataByCode(myArr);
   if (temporaryData && temporaryData.length > 0) {
     setCases(temporaryData);
+    select.classList.toggle("show");
   } else {
     fallBackOnIndia();
   }
