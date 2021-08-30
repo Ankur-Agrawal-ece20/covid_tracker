@@ -11,7 +11,14 @@
       <h1>Covid Tracker</h1>
     </div>
     <div class="main-body">
-      <div class="filter-wrapper">Filter</div>
+      <div class="filter-wrapper">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            </div>
+          </div>
+      </div>
 
       <div class = "card-title-wrapper">
           <div class="title-wrapper">
@@ -56,6 +63,5 @@
       
     </div>
     <script src="index.js"></script>
-    <script src="assets/countries.js"></script>
   </body>
 </html>
