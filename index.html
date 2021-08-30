@@ -12,42 +12,50 @@
     </div>
     <div class="main-body">
       <div class="filter-wrapper">Filter</div>
-      <div class="card-wrapper">
-        <div class="card red-card">
-          <div class="text-content">
-            <span class="card-title"><strong>Confirmed</strong></span>
+
+      <div class = "card-title-wrapper">
+          <div class="title-wrapper">
+            <h1 id="country-detail">Country Code</h1>
           </div>
-          <div>
-            <p>no of cases</p>
+          <div class="card-wrapper">
+            <div class="card red-card">
+              <div class="text-content">
+                <span class="card-title"><strong>Confirmed</strong></span>
+              </div>
+              <div>
+                <p id="confirmedCases">no of cases</p>
+              </div>
+            </div>
+            <div class="card blue-card">
+              <div class="text-content">
+                <span class="card-title"><strong>Active</strong></span>
+              </div>
+              <div>
+                <p id="activeCases">no of cases</p>
+              </div>
+            </div>
+            <div class="card green-card">
+              <div class="text-content">
+                <span class="card-title"><strong>Recovered</strong></span>
+              </div>
+              <div>
+                <div></div>
+                <p id="recoveredCases">no of cases</p>
+              </div>
+            </div>
+            <div class="card grey-card">
+              <div class="text-content">
+                <span class="card-title"><strong>Deceased</strong></span>
+              </div>
+              <div>
+                <p id="deceasedCases">no of cases</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card blue-card">
-          <div class="text-content">
-            <span class="card-title"><strong>Active</strong></span>
-          </div>
-          <div>
-            <p>no of cases</p>
-          </div>
-        </div>
-        <div class="card green-card">
-          <div class="text-content">
-            <span class="card-title"><strong>Recovered</strong></span>
-          </div>
-          <div>
-            <div></div>
-            <p>no of cases</p>
-          </div>
-        </div>
-        <div class="card grey-card">
-          <div class="text-content">
-            <span class="card-title"><strong>Deceased</strong></span>
-          </div>
-          <div>
-            <p>no of cases</p>
-          </div>
-        </div>
       </div>
+      
     </div>
-    <script src="/index.js"></script>
+    <script src="index.js"></script>
+    <script src="assets/countries.js"></script>
   </body>
 </html>
