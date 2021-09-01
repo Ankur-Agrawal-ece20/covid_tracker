@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+    <title>Covid Tracker</title>
+</head>
+<body>
+    <div id="header">
+        <div id="title">Covid Tracker</div>
+    </div>
+    <div id="country">Country</div>
+    <div id="selectcnt">
+        <button onclick="getcases()">Find</button>
+        <select id="codes">
+            <option value="Default" >Choose Country</option>
+        </select>
+    </div>
+    <div id="details">
+        <div></div>
+        <div style="color: rgb(212, 67, 67);" class="detbox">
+            <strong>Confirmed</strong>
+            <div id="confirm"></div>
+        </div>
+        <div style="color: rgb(51, 51, 214);" class="detbox">
+            <strong>Active</strong>
+            <div id="active"></div>
+        </div>
+        <div style="color: rgb(59, 199, 59);" class="detbox">
+            <strong>Recovered</strong>
+            <div id="recover"></div>
+        </div>
+        <div style="color: rgb(17, 16, 16);" class="detbox">
+            <strong>Decreased</strong>
+            <div id="decrease"></div>
+        </div>
+        <div></div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+    <script src="countrycodes.json"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+#header{
+    background-image: url('covidtracker.jpg');
+    height: 40vh;
+    width: 100%;
+    margin: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#title{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    text-align: center;
+    width: max-content;
+    font-size: 100px;
+    font-weight: 800;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-shadow: 4px 4px black,-4px 4px black,4px -4px black,-4px -4px black;;
+    color: white;
+    transform: translateX(-50%);
+}
+#country{
+    margin-top: 43vh;
+    font-size: 30px;
+    text-align: center;
+}
+#selectcnt{
+    text-align: center;
+    margin: 5px 0px 15px 0px;
+    font-size: 20px;
+}
+#selectcnt button{
+    background-color: rgb(28, 104, 219);
+    color: white;
+    border: 2px solid black;
+    font-weight: 900;
+}
+#codes{
+    max-width: 70%;
+    border: 2px solid black;
+}
+#details{
+    display: grid;
+    grid-template-columns: auto max-content max-content max-content max-content auto;
+}
+.detbox{
+    margin: 4px;
+    width: 15vw;
+    height: 80px;
+    min-width: 130px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align:center;
+    display: grid;
+    grid-template-rows: 35px 45px;
+    font-size: 25px;
+}
+.detbox strong{
+    border-bottom: 2px solid black;
+    font-size: 20px;
+}
+@media screen  and (max-width:800px) {
+    #title{
+        font-size: 70px;
+        width:auto;
+    }
+}
+@media screen  and (max-width:600px) {
+    #details{
+        grid-template-columns: 100%;
+    }
+    .detbox{
+        width: 70%;
+        margin: 4px auto 4px auto;
+    }
+}
